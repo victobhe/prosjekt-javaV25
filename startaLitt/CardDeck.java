@@ -72,7 +72,7 @@ public class CardDeck{
         cards = ny_liste3;
     }
 
-   /*  public void deal(CardHand hand, int x){
+    public void deal(CardHand hand, int x){
         if (x > cards.size()){
             x = cards.size();
         }
@@ -81,7 +81,7 @@ public class CardDeck{
             hand.addCard(cards.getLast());
             cards.remove(cards.getLast());
         }
-    } */
+    }
     //oving 5:
 
     public boolean hasCard(Predicate<Card> pred){
