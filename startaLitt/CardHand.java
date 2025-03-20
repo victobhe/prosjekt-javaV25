@@ -18,7 +18,7 @@ public class CardHand {
         return myCards.get(-1);
     }
 
-    public int getCardCount(){
+    public int getSumCard(){
         int sum = 0;
         for (Card card : myCards) {
             sum += card.getFace();
