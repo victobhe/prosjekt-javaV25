@@ -32,6 +32,9 @@ public class Dealer {
     //dealer er alltid nødt til å slå summen til motspiller, men dersom det er flere spillere skal dealer stå på x>17 og hitte på x<17
     //returnerer true om man skal hitte
     public boolean standOrHit() {
+        if (mustBeat > 21){
+            return false;
+        }
         if (totalsum < mustBeat){
             return true;
         }
