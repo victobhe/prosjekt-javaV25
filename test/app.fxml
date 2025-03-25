@@ -19,7 +19,7 @@
          <font>
             <Font size="35.0" />
          </font></Text>
-      <Button fx:id = "CardHandSum" layoutX="514.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="33.0" prefWidth="63.0" text="Hit" />
+      <Button fx:id="CardHandSum" layoutX="514.0" layoutY="298.0" mnemonicParsing="false" onAction="addCard" prefHeight="33.0" prefWidth="63.0" text="Hit" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff29" height="107.0" layoutX="206.0" layoutY="271.0" stroke="#75a83f" strokeType="INSIDE" width="69.0">
          <effect>
             <InnerShadow />
