@@ -2,7 +2,7 @@ package startaLitt;
 
 import java.util.ArrayList;
 
-public class Dealer extends CardHand{
+public class Dealer {
     public int totalsum;
     public int mustBeat;
     
