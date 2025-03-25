@@ -6,7 +6,7 @@ public class Dealer extends CardHand{
     public int totalsum;
     public int mustBeat;
     
-    ArrayList<Card> myCards = new ArrayList<>();
+    public ArrayList<Card> myCards = new ArrayList<>();
 
     public Dealer(CardHand motspiller){
         this.mustBeat = motspiller.getSumCard();
@@ -42,11 +42,4 @@ public class Dealer extends CardHand{
         return getSumCard() > 21;
     }
     
-    /* public boolean Play(){
-        while (standOrHit()) {
-            
-
-        }
-    } */
-
 }

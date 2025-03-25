@@ -3,15 +3,14 @@ package startaLitt;
 import java.util.ArrayList;
 
 public class CardHand {
-     public int totalsum;
+    public int PengePung;
+    public int CardHandSum;
     
     ArrayList<Card> myCards = new ArrayList<>();
 
     public void addCard(Card card){
         if (under21()){
             myCards.add(card);
-        } else {
-            throw new IllegalArgumentException("tapt");
         }
     }
     public Card getLastCard(){
