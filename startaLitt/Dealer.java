@@ -14,7 +14,7 @@ public class Dealer extends CardHand{
     
     public void addCard(Card card){
         myCards.add(card);
-        totalsum += card.getFace();
+        totalsum += card.getValue();
     }
 
     //Tror at denne blir viktig når man skal implementere enkeltkort som skal dukke opp på skjermen.
@@ -25,7 +25,7 @@ public class Dealer extends CardHand{
     public int getSumCard(){
         int sum = 0;
         for (Card card : myCards) {
-            sum += card.getFace();
+            sum += card.getValue();
         }
         return sum;
     }

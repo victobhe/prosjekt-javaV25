@@ -30,24 +30,7 @@ public class CardHand {
         for (Card card : myCards) {
             sum += card.getValue();
         }
-        return (sum > 21);
+        return (sum < 21);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }

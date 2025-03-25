@@ -1,6 +1,7 @@
 package startaLitt;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CardDeck {
     ArrayList<Card> cards = new ArrayList<>();
@@ -26,9 +27,7 @@ public class CardDeck {
                     default:
                         break;
                 }
-                if (card != null){
-                    cards.add(card);
-                }
+                cards.add(card);
         }
         }
     }
@@ -42,34 +41,18 @@ public class CardDeck {
         return dette;
     }
 
-    public void shufflePerfectly(){
-        ArrayList<Card> ny_liste1 = new ArrayList<>();
-        ArrayList<Card> ny_liste2 = new ArrayList<>();
-        ArrayList<Card> ny_liste3 = new ArrayList<>();
-
-        for (int i = 0; i < cards.size(); i++) {
-            if (i < (cards.size()/2)){
-                ny_liste1.add(cards.get(i));
-            }
-            else{
-                ny_liste2.add(cards.get(i));
-            }
-        }
-        for (int i = 0; i < cards.size(); i++) {
-            if (i % 2 == 0){
-                ny_liste3.add(ny_liste1.get(0));
-                ny_liste1.remove(0);
-            }
-            else{
-                ny_liste3.add(ny_liste2.get(0));
-                ny_liste2.remove(0);
-            }
-        }
-        cards = ny_liste3;
+    public void shuffleDeck() {
+        Collections.shuffle(cards);
     }
 
-    public void deal(CardHand hand){
-        hand.addCard(cards.get(0));
-        cards.remove(0);
+    public Card deal(){
+        return cards.remove(0);
+    }
+
+    public static void main(String[] args) {
+        CardDeck deck = new CardDeck();
+        System.out.println(deck);
+        deck.shuffleDeck();
+        System.out.println(deck);
     }
 }

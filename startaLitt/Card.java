@@ -1,15 +1,11 @@
 package startaLitt;
 
 public class Card {
-    public char suit;
-    public String face;
-    public int value;
-    public Comparable<Card> comparable;
+    private char suit;
+    private String face;
+    private int value;
     
     public Card(char suit, int face) {
-        if (!checkValidCard(suit, face)){
-            throw new IllegalArgumentException("Ugyldig kort");
-        }
         this.suit = suit;
         if (face >= 2 && face <= 10) {
             this.face = Integer.toString(face);
@@ -35,16 +31,6 @@ public class Card {
                 break;
         }
 
-    }
-    
-    public boolean checkValidCard(char suit, int face){
-        if (suit != 'H' && suit != 'C' && suit != 'S' && suit != 'D' ){
-            return false;
-        }
-        if (face < 1 || face > 13){
-            return false;
-        }
-        return true;
     }
 
     public char getSuit() {
