@@ -2,7 +2,8 @@ package startaLitt;
 
 import java.util.ArrayList;
 
-public class CardHand extends CardDeck{
+public class CardHand 
+{
     public int pengePung;
     public int cardHandSum;
     
