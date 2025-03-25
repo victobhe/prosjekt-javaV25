@@ -3,8 +3,8 @@ package startaLitt;
 import java.util.ArrayList;
 
 public class CardHand {
-    public int PengePung;
-    public int CardHandSum;
+    public int pengePung;
+    public int cardHandSum;
     
     ArrayList<Card> myCards = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class CardHand {
     public int getSumCard(){
         int sum = 0;
         for (Card card : myCards) {
-            sum += card.getFace();
+            sum += card.getValue();
         }
         return sum;
     }
@@ -28,7 +28,7 @@ public class CardHand {
     public boolean under21(){
         int sum = 0;
         for (Card card : myCards) {
-            sum += card.getFace();
+            sum += card.getValue();
         }
         return (sum > 21);
     }

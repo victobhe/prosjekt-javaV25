@@ -2,15 +2,13 @@ package startaLitt;
 
 import java.util.ArrayList;
 
-public class CardDeck{
-   
+public class CardDeck {
     ArrayList<Card> cards = new ArrayList<>();
 
 
     public CardDeck(){
-        int n = 13;
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < 13; j++) {
                 Card card = null;
                 switch (i) {
                     case 0:
@@ -70,18 +68,8 @@ public class CardDeck{
         cards = ny_liste3;
     }
 
-    public void deal(CardHand hand, int x){
-        if (x > cards.size()){
-            x = cards.size();
-        }
-        
-        for (int i = 0; i < x; i++) {   
-            hand.addCard(cards.getLast());
-            cards.remove(cards.getLast());
-        }
-    }
-        
-    public static void main(String[] args) {
-   
+    public void deal(CardHand hand){
+        hand.addCard(cards.get(0));
+        cards.remove(0);
     }
 }
